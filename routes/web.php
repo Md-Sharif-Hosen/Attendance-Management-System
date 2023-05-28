@@ -35,6 +35,17 @@ Route::get('/user/delete/{id}','UserController@delete')->name('user.delete');
 //admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin'], function () {
 
+    //Employee Details
     Route::get('/employee/add', 'EmployeeController@add')->name('admin.employee.add');
     Route::post('/employee/store', 'EmployeeController@store')->name('admin.employee.store');
+    Route::get('/employee/view', 'EmployeeController@view')->name('admin.employee.view');
+    Route::get('/employee/edit/{id}', 'EmployeeController@edit')->name('admin.employee.edit');
+    Route::post('/employee/update/{id}', 'EmployeeController@update')->name('admin.employee.update');
+    Route::get('/employee/delete/{id}', 'EmployeeController@delete')->name('admin.employee.delete');
+});
+
+//webiste
+Route::group( ['prefix'=>'website','middleware'=>['auth'] ,'namespace'=>'website'],function(){
+
+    Route::get('/employee/profile','EmployeeController@view')->name('website.user.profile');
 });

@@ -24,6 +24,7 @@ class CreateEmployeeDetailsTable extends Migration
             $table->string('department', 100)->nullable();
             $table->string('post', 100)->nullable();
             $table->string('salary')->nullable();
+            $table->string('image',100)->nullable();
             $table->timestamps();
         });
     }

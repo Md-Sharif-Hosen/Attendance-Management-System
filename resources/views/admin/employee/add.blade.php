@@ -43,12 +43,18 @@
                         <div class="form-group">
                             <label for="" > Gender:</label>
                             <br>
-                            <input type="radio" value="Male" name="gender">
-                            <label for="gender" >Male</label>
-                            <input type="radio" value="Female" name="gender">
-                            <label for="gender" >Female</label>
-                            <input type="radio" value="Others" name="gender">
-                            <label for="gender">Others</label>
+                            <label for="Male" >
+                                <input type="radio" value="Male" name="gender">
+
+                                Male</label>
+                                <label for="Female" >
+                                <input type="radio" value="Female" name="gender">
+
+                                Female</label>
+                                <label for="Others">
+                                <input type="radio" value="Others" name="gender">
+
+                                Others</label>
                         </div>
                         <div class="form-group">
                             <label for="">Department</label>
@@ -71,6 +77,10 @@
                         <div class="form-group">
                             <label for="">Salary</label>
                             <input type="text" class="form-control" name="salary">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Image</label>
+                            <input type="file" name="image" class="form-control">
                         </div>
                         <div class="text-center card-footer">
                             <button type="submit" class="btn btn-sm btn-outline-success">Submit</button>

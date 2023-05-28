@@ -28,7 +28,7 @@
                             class="menu-arrow"></span></a>
                     <ul>
                         <li><a href="{{ route('admin.employee.add') }}">User Add </a></li>
-                        {{-- <li><a href="{{ route('user.view') }}">User View</a></li> --}}
+                        <li><a href="{{ route('admin.employee.view') }}">User View</a></li>
                     </ul>
                 </li>
             </ul>
