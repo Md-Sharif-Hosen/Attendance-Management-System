@@ -12,14 +12,19 @@
 
                 </li>
 
-                <li class="submenu">
+                <li >
 
-                    <a href="#"><i class="fas fa fa-home"></i> <span> Home </span> <span
+                    <a href="{{ route('website.user.home') }}"><i class="fas fa fa-home"></i> <span> Home </span> <span
                             class=""></span></a>
                 </li>
-                <li class="submenu">
+                <li >
 
-                    <a href="#"><i class="fas fa fa-user"></i> <span> Profile </span> <span
+                    <a href="{{ route('website.user.profile') }}"><i class="fas fa fa-user"></i> <span> Profile </span> <span
+                            class=""></span></a>
+                </li>
+                <li >
+
+                    <a href="{{ route('webiste.user.attendance') }}"><i class="fas fa fa-user"></i> <span>MY Attendance </span> <span
                             class=""></span></a>
                 </li>
 

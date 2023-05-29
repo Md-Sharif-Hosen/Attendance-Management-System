@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     //
-    public function view()
+
+
+    public function home()
     {
         //function_body
-        return view('website.user.employee_profile');
+        return view('website.user.user_home');
+    }
+    public function profile()
+    {
+        //function_body
+        return view('Website.user.user_profile');
     }
 }

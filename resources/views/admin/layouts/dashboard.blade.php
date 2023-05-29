@@ -24,6 +24,8 @@
     <link rel="stylesheet"  href="{{ asset('admin/assets') }}/plugins/fontawesome/css/all.min.css">
 
     <link rel="stylesheet"  href="{{ asset('admin/assets') }}/css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -220,6 +222,7 @@
     <script src="{{ asset('admin/assets') }}/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <script src="{{ asset('admin/assets') }}/js/script.js"></script>
+
 </body>
 
 <!-- Mirrored from preschool.dreamguystech.com/template/inbox.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 May 2023 04:38:53 GMT -->

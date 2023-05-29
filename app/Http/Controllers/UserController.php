@@ -26,7 +26,7 @@ class UserController extends Controller
         $userdata->email= request('email');
         $userdata->password=Hash::make(request('password')) ;
         $userdata->save();
-        return redirect()->route('user.add');
+        return redirect()->back()->with('success','User Create Successfully');
     }
 
     public function view()
