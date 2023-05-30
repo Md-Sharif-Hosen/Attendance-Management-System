@@ -35,6 +35,8 @@ Route::get('/user/delete/{id}', 'UserController@delete')->name('user.delete');
 //admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin'], function () {
 
+    Route::get('/dashboard','EmployeeController@dashboard')->name('admin.dashboard');
+
     //Employee Details
     Route::get('/employee/add', 'EmployeeController@add')->name('admin.employee.add');
     Route::post('/employee/store', 'EmployeeController@store')->name('admin.employee.store');

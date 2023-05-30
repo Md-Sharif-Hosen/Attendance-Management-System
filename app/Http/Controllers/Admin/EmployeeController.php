@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Storage;
 class EmployeeController extends Controller
 {
     //
+public function dashboard()
+{
+    //function_body
+    return view('admin.dashboard');
+}
+
     public function add()
     {
         //function_body
