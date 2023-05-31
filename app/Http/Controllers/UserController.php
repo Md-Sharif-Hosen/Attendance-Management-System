@@ -54,7 +54,7 @@ class UserController extends Controller
        $userdata_update->email = request('email');
        $userdata_update->password = Hash::make(request('password')) ;
        $userdata_update->save();
-       return redirect()->route('user.view');
+       return redirect()->back()->with('Update',"Complete your Update");
     }
     public function delete($id)
     {

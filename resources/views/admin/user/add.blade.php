@@ -14,7 +14,7 @@
                         icon: 'success',
                         confirmButtonText: 'Close '
                     })
-                    location.href="{{ route('user.view') }}"
+                    // location.href="{{ route('user.view') }}"
                 </script>
             @endif
             <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data">

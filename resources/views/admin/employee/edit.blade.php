@@ -2,6 +2,19 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-8">
+            @if (session()->get('Update'))
+            <div class="alert alert-success">
+                {{ session()->get('Update') }}
+            </div>
+            <script defer>
+                Swal.fire({
+                    title: 'Thanks',
+                    text: '{{ session()->get('Update') }}',
+                    icon: 'Create',
+                    confirmButtonText: 'Close'
+                })
+            </script>
+        @endif
             <form action="{{ route('admin.employee.update',$employee_data_edit->id) }}" method="post"
                 enctype="multipart/form-data">
                 @csrf
