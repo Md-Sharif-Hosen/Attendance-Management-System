@@ -30,35 +30,57 @@ class EmployeeController extends Controller
 
     public function store(request $request)
     {
-        $this->validate($request, [
-            'user_id' => ['required'],
-            'name' => ['required', 'min:5'],
-            'email'=>['required','email','min:9'],
-'phone_number'=>['required']
+        $this->validate(
+            $request,
+            [
+                'user_id' => ['required'],
+                'name' => ['required', 'min:5'],
+                'email' => ['required'],
+                'phone_number' => ['required'],
+                'date_of_birth' => ['required'],
+                'gender' => ['required'],
+                'department' => ['required'],
+                'post' => ['required'],
+                'salary' => ['required'],
+                'image' => ['required']
+            ],
+            [
+                'name.required' => 'Please type your name',
+                'name.min' => 'The name should be five character',
+                'email.required' => 'select your Email',
+                'phone_number.required' => 'submit your phone Number',
+                'phone_number.min' => 'the number must be 11 character',
 
-
-
-        ]);
+            ]
+        );
 
         //function_body
-        $employee_data = new EmployeeDetails();
-        $employee_data->user_id = request('user_id');
-        $employee_data->name = request('name');
-        $employee_data->email = request('email');
-        $employee_data->phone_number = request('phone_number');
-        $employee_data->date_of_birth = request('date_of_birth');
-        $employee_data->gender = request('gender');
-        $employee_data->department = request('department');
-        $employee_data->post = request('post');
-        $employee_data->salary = request('salary');
+        // $employee_data = new EmployeeDetails();
+        // $employee_data->user_id = request('user_id');
+        // $employee_data->name = request('name');
+        // $employee_data->email = request('email');
+        // $employee_data->phone_number = request('phone_number');
+        // $employee_data->date_of_birth = request('date_of_birth');
+        // $employee_data->gender = request('gender');
+        // $employee_data->department = request('department');
+        // $employee_data->post = request('post');
+        // $employee_data->salary = request('salary');
+        // if (request()->hasFile('image')) {
+
+        //     $employee_data->image = Storage::put('/employee_image', $request->file('image'));
+        // }
+
+        // $employee_data->save();
+
+        $employee_data = EmployeeDetails::create(request()->except(['image']));
         if (request()->hasFile('image')) {
 
             $employee_data->image = Storage::put('/employee_image', $request->file('image'));
         }
-
         $employee_data->save();
         return redirect()->back()->with('Create', 'Employee Create Successfully!');
     }
+
 
     public function view()
     {
